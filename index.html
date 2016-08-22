@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" ></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
@@ -17,7 +17,7 @@
       <div class="row">
         <div class="col-md-6">
           <h2>Add a contact:</h2>
-          <form id="new-contract">
+          <form id="new-contact">
             <div class="form-group">
               <label for="new-first-name">First name</label>
               <input type="text" class="form-control" id="new-first-name">
@@ -35,7 +35,15 @@
 
           </ul>
         </div>
-      </div>    
+        <div class="col-md-6">
+          <div id="show-contact">
+            <h2></h2>
+
+            <p>  First name: <span class="first-name"></span>  </p>
+            <p>   Last name: <span class="last-name"></span>   </p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
   </html>
