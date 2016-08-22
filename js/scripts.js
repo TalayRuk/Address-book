@@ -24,11 +24,12 @@ $(document).ready(function() {
       $("#show-contact").show();
       $("#show-contact h2").text(newContact.firstName);
       $(".first-name").text(newContact.firstName);
-      $("last-name").text(newContact.lastName);
+      $(".last-name").text(newContact.lastName);
     });
 
     $("input#new-first-name").val("");
     $("input#new-last-name").val("");
+
 
   });
 
