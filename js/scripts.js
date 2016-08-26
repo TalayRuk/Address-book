@@ -28,9 +28,9 @@ $(document).ready(function() {
       $(".first-name").text(newContact.firstName);
       $(".last-name").text(newContact.lastName);
     });
-
-    $("input#new-first-name").val("");
-    $("input#new-last-name").val("")
+// below r not neccessary .. still works without
+    // $("input#new-first-name").val("");
+    // $("input#new-last-name").val("")
 
   });
 });
