@@ -66,7 +66,9 @@ $(document).ready(function() {
       var inputtedStreet = $(this).find("input.new-street").val();
       var inputtedCity = $(this).find("input.new-city").val();
       var inputtedState = $(this).find("input.new-state").val();
+      var newAddress = new Address (inputtedStreet, inputtedCity, inputtedStreet);
       newContact.addresses.push(newAddress);
+    });
 // Here, we've created a loop that cycles through each DOM element w/the class new-address.
 // Much like looping through all elements of an array w/the forEach() method, we can
 // do the same w/$each()method. However, instead of taking a parameter that each element is assigned to,
@@ -80,9 +82,8 @@ $(document).ready(function() {
 // children() method, too, but children() will only traverse down a single level, wheras find() will
 // look through children, their children, and so on. Since our inputs are nested within form-group <div>s,
 // we need to traverse down two levels. Therefore, we use find() instead of children().
-    });
-    $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
 
+    $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
 
     $(".contact").last().click(function() {
       $("#contacts").empty();
@@ -93,11 +94,14 @@ $(document).ready(function() {
       $("ul#addresses").text("");
       newContact.addresses.forEach(address) {
         $("ul#addresses").append("<li>" + address.street + ", " + address.city + " " + address.state + "</li>")
-      }
+      });
     });
-// below r not neccessary .. still works without
+// below r used to clear the fields after the form is submitted**
     $("input#new-first-name").val("");
-    $("input#new-last-name").val("")
+    $("input#new-last-name").val("");
+    $("input.new-street").val("");
+    $("input.new-city").val("");
+    $("input.new-state").val("");
 
   });
 });
