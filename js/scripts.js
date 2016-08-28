@@ -23,6 +23,9 @@ Address.prototype.street = function() {
 // the user have option to add more than one address to a Contact, they
 // can just click "another address btn to receive more address form fields
 // b4 submitting the form to create the new Contact!"
+// When appending a large amount of HTML w/$, we'll break it into smaller
+// strings on diff lines, using the + operator to concatenate them, as below
+// this make it more readable & also keep same indentation as the HTML**
 $(document).ready(function() {
   $("#add-address").click(funtion() {
     $("#new-addresses").append('<div class="new-address">' +
@@ -40,9 +43,7 @@ $(document).ready(function() {
                                  '</div>' +
                                '</div>');
   });
-});
 
-$(document).ready(function() {
   $("form#new-contact").submit(function(event) {
     event.preventDefault();
 
